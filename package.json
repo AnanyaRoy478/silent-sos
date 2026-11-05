@@ -1,0 +1,16 @@
+{
+  "name": "silent-sos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Silent SOS Emergency Web App (MERN)",
+  "scripts": {
+    "setup": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "seed:admin": "npm run seed:admin --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
